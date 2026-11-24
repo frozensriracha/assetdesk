@@ -35,7 +35,7 @@ python3 -m venv .venv
 
 If Ubuntu reports missing `ensurepip`, run `sudo apt-get install python3-venv`, then retry. Check Python's SQLite version with `python -c "import sqlite3; print(sqlite3.sqlite_version)"` (use `python3` on Linux). If it is older than 3.37, use a newer Python build.
 
-Open **http://127.0.0.1:5000**. Stop the application with **Ctrl+C**. On later runs, use only the final command: omit `--init-db` to keep saved changes. Initialization refuses to overwrite an existing file. Use a new filename for another fresh demonstration database.
+Open **http://127.0.0.1:5000**. Stop the application with **Ctrl+C**. On later runs, use the final command: omit `--init-db` to keep saved changes. Initialization refuses to overwrite an existing file. Use a new filename for another fresh demonstration database.
 
 ## Database setup and configuration
 
@@ -61,7 +61,7 @@ The [final ER diagram](ERD.md) documents all tables, columns, and relationship o
 
 All user-supplied SQL values are parameterized. The app validates required fields, IDs, types, dates, and checkout eligibility. Constraints provide additional enforcement. Rejected requests show readable messages; use the browser's Back button to correct a form. Connections close after each request, and multi-step changes commit or roll back together.
 
-## Demonstration walkthrough
+## Demonstration
 
 Start with a fresh `demo.db`. Search for IT-1009 and open its history: Jamie Wells and Avery Chen were previous custodians. Open Reports: New Ventures owns zero devices, and OPS-1011 has repeated incidents.
 
@@ -115,4 +115,4 @@ Generated databases, virtual environments, caches, and credential files are excl
 
 ## Limitations
 
-This local coursework app binds to `127.0.0.1` with debug disabled. It has no login or roles and is not configured for public hosting. It displays incident/service history but has no maintenance-resolution workflow; unresolved issues keep equipment unavailable. Employee/department administration is outside the current interface. There are no known blocking problems in the tested setup and supported operations. Overdue results depend on the report date as explained above.
+This locally-hosted app binds to `127.0.0.1` with debug disabled. It has no login or roles and is not configured for public hosting. It displays incident/service history but has no maintenance-resolution workflow; unresolved issues keep equipment unavailable. Employee/department administration is outside the curent interface. There are no known blocking problems in the tested setup and supported operations. Overdue results depend on the report date as explained above.
