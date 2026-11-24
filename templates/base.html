@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}Asset accountability{% endblock %} · AssetDesk</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+<header><a class="brand" href="{{ url_for('inventory') }}">A<span>AssetDesk</span></a>
+<nav aria-label="Main navigation"><a href="{{ url_for('inventory') }}">Inventory</a><a href="{{ url_for('reports') }}">Reports</a><a class="button" href="{{ url_for('register') }}">+ Register device</a></nav></header>
+<main>{% for message in get_flashed_messages() %}<div class="notice" role="status">{{ message }}</div>{% endfor %}
+{% block content %}{% endblock %}</main>
+<footer>IT ASSET & DEVICE ACCOUNTABILITY <span>All dates and times are UTC.</span></footer>
+</body></html>

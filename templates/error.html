@@ -1,0 +1,2 @@
+{% extends 'base.html' %}{% block title %}Unable to complete request{% endblock %}
+{% block content %}<div class="panel error" role="alert"><p class="eyebrow">PLEASE CHECK YOUR REQUEST</p><h1>We couldn’t complete that action.</h1><p>{{ message }}</p><p>Use your browser’s Back button to correct the form, or return to the inventory.</p><a class="button" href="{{ url_for('inventory') }}">Return to inventory</a></div>{% endblock %}

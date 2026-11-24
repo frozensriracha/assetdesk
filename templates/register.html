@@ -1,0 +1,11 @@
+{% extends 'base.html' %}{% from 'forms.html' import csrf, location with context %}
+{% block title %}Register device{% endblock %}
+{% block content %}<p class="eyebrow">ADD EQUIPMENT</p><h1>Register a device</h1><p class="muted">New equipment enters inventory as available. Fields marked * are required.</p>
+<form method="post" class="panel form-grid">{{ csrf() }}
+<label>Asset tag *<input name="asset_tag" required maxlength="120" placeholder="IT-1021"></label>
+<label>Serial number *<input name="serial_number" required maxlength="120"></label>
+<label>Device type *<select name="device_type" required><option value="">Choose a type</option>{% for t in types %}<option>{{ t }}</option>{% endfor %}</select></label>
+<label>Owning department *<select name="department_id" required><option value="">Choose a department</option>{% for d in departments %}<option value="{{ d.department_id }}">{{ d.department_name }}</option>{% endfor %}</select></label>
+{{ location('location_id', 'Expected location *', locations) }}
+<label>Purchase date (optional)<input type="date" name="purchase_date"></label>
+<div class="actions"><button>Register device</button><a href="{{ url_for('inventory') }}">Cancel</a></div></form>{% endblock %}

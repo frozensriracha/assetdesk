@@ -1,0 +1,2 @@
+{% macro csrf() %}<input type="hidden" name="csrf" value="{{ session.csrf }}">{% endmacro %}
+{% macro location(name, label, locations) %}<label>{{ label }}<select name="{{ name }}" required><option value="">Choose a location</option>{% for l in locations %}<option value="{{ l.location_id }}">{{ l.location_name }}</option>{% endfor %}</select></label>{% endmacro %}
