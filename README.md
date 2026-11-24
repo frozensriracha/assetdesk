@@ -13,7 +13,7 @@ cd assetdesk
 
 Alternatively, download and extract GitHub's ZIP. Run the following commands from the extracted project folder.
 
-## Windows setup (PowerShell)
+## Windows setup
 
 ```powershell
 python -m venv .venv
@@ -24,7 +24,7 @@ python -m venv .venv
 
 If your installation uses the Python launcher, use `py -3 -m venv .venv` for the first command. Environment activation is not required.
 
-## macOS, Linux, or WSL setup (Bash)
+## macOS, Linux, or WSL setup
 
 ```bash
 python3 -m venv .venv
@@ -115,4 +115,4 @@ Generated databases, virtual environments, caches, and credential files are excl
 
 ## Limitations
 
-This locally-hosted app binds to `127.0.0.1` with debug disabled. It has no login or roles and is not configured for public hosting. It displays incident/service history but has no maintenance-resolution workflow; unresolved issues keep equipment unavailable. Employee/department administration is outside the curent interface. There are no known blocking problems in the tested setup and supported operations. Overdue results depend on the report date as explained above.
+This locally-hosted app binds to `127.0.0.1` with debug disabled. It has no login or roles and is not configured for public hosting. It displays incident/service history but has no maintenance-resolution workflow. Unresolved issues keep equipment unavailable. Employee/department administration is outside the curent interface. There are no known blocking problems in the tested setup and supported operations. Overdue results depend on the report date as explained above.
